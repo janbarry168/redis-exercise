@@ -47,9 +47,9 @@ public class RedisTestControllerImpl implements CacheTestController {
 
     @Override
     public void lockCache(String key, String value) {
-        boolean result = cacheService.lockCache(key, value);
-        if (!result) {
-            throw new ControllerException(HttpStatus.OK, "lockCache fail!", "key already exist: " + key);
+        boolean lockStatus = cacheService.lockCache(key, value);
+        if (!lockStatus) {
+            throw new ControllerException("lockCache fail!", "key already exist: " + key);
         }
     }
 
