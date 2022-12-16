@@ -1,10 +1,10 @@
-package project.janbarry.cacheservice.service;
+package project.janbarry.springbootredis.service;
 
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
-public interface CacheService {
+public interface RedisService {
 
     Optional<String> getCache(String key);
 
@@ -16,6 +16,7 @@ public interface CacheService {
 
     /**
      * lock key for one minute
+     *
      * @param key
      * @param value
      * @return

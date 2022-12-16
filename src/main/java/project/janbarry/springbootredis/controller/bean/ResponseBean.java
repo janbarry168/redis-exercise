@@ -1,4 +1,4 @@
-package project.janbarry.cacheservice.controller.bean;
+package project.janbarry.springbootredis.controller.bean;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

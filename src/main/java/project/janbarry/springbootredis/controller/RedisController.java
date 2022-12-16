@@ -1,4 +1,4 @@
-package project.janbarry.cacheservice.controller;
+package project.janbarry.springbootredis.controller;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
@@ -8,8 +8,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Map;
+
 @Tag(name = "Cache Test")
-public interface CacheTestController {
+public interface RedisController {
 
     @Operation(summary = "query cache by key")
     @ApiResponses(value = {@ApiResponse(responseCode = "404", description = "cache not found")})
@@ -30,6 +31,6 @@ public interface CacheTestController {
 
     @Operation(summary = "save and lock cache", description = "lock one minute")
     @PostMapping("/lock/{key}/{value}")
-    void lockCache(@PathVariable String key, @PathVariable String value) throws Exception ;
+    void lockCache(@PathVariable String key, @PathVariable String value) throws Exception;
 
 }

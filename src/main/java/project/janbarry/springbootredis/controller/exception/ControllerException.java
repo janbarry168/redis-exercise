@@ -1,8 +1,8 @@
-package project.janbarry.cacheservice.controller.exception;
+package project.janbarry.springbootredis.controller.exception;
 
 import lombok.Getter;
 import org.springframework.http.HttpStatus;
-import project.janbarry.cacheservice.controller.bean.ResponseBean;
+import project.janbarry.springbootredis.controller.bean.ResponseBean;
 
 @Getter
 public class ControllerException extends RuntimeException {

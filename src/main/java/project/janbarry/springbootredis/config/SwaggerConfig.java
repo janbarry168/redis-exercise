@@ -1,4 +1,4 @@
-package project.janbarry.cacheservice.config;
+package project.janbarry.springbootredis.config;
 
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;
@@ -11,8 +11,8 @@ public class SwaggerConfig {
     @Bean
     public OpenAPI createOpenApi() {
         return new OpenAPI().info(new Info()
-                .title("Cache API")
-                .description("cache service")
+                .title("Redis API")
+                .description("redis service")
                 .version("v0.0.1"));
     }
 

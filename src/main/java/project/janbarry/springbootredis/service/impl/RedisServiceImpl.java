@@ -1,10 +1,10 @@
-package project.janbarry.cacheservice.service.impl;
+package project.janbarry.springbootredis.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 import org.springframework.stereotype.Service;
-import project.janbarry.cacheservice.service.CacheService;
+import project.janbarry.springbootredis.service.RedisService;
 
 import java.util.HashMap;
 import java.util.List;
@@ -13,9 +13,9 @@ import java.util.Optional;
 import java.util.concurrent.TimeUnit;
 
 @Service
-public class RedisServiceImpl implements CacheService {
+public class RedisServiceImpl implements RedisService {
 
-    private RedisTemplate<String, Object> redisTemplate;
+    private final RedisTemplate redisTemplate;
 
     @Autowired
     public RedisServiceImpl(RedisTemplate redisTemplate) {
